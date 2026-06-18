@@ -148,8 +148,7 @@ main {
   color: var(--surface);
 }
 
-.lang-block { display: none; }
-.lang-block.active { display: block; }
+.lang-block:not(.active) { display: none; }
 
 /* ── Headings ─────────────────────────────────────────────────────────── */
 
@@ -312,7 +311,6 @@ footer {
   color: var(--ink-muted);
   font-size: 13px;
   background: rgba(255, 255, 255, 0.6);
-  margin-top: var(--s-6);
 }
 
 footer a { color: var(--primary-dark); }
