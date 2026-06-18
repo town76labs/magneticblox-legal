@@ -1,0 +1,240 @@
+:root {
+  --bg: #f5f1ea;
+  --surface: #ffffff;
+  --ink: #2b2624;
+  --ink-soft: #5a4f49;
+  --accent: #d9612b;
+  --accent-soft: #f4d6c4;
+  --border: #e7ddd1;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(60, 35, 20, 0.08);
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site-header {
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.site-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.brand span { color: var(--accent); }
+
+nav.site-nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav.site-nav a {
+  color: var(--ink-soft);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+h1 {
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: var(--ink-soft);
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.meta {
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin: 0 0 28px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 6px;
+  background: var(--surface);
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  margin: 8px 0 28px;
+}
+
+.lang-switch button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.lang-switch button.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+section.legal-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  margin: 0 0 16px;
+  box-shadow: var(--shadow);
+}
+
+section.legal-section h2 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+section.legal-section p {
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+section.legal-section p:last-child { margin-bottom: 0; }
+
+.lang-block { display: none; }
+.lang-block.active { display: block; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 13px;
+  background: var(--surface);
+}
+
+/* Landing page */
+.hero {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 540px;
+  margin: 0 auto 20px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 32px 0;
+}
+
+.feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.feature h3 {
+  font-size: 16px;
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+
+.feature p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cta.secondary {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.support-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  margin: 0 0 16px;
+  box-shadow: var(--shadow);
+}
+
+.support-card h2 { margin: 0 0 8px; font-size: 18px; }
+.support-card p { margin: 0 0 8px; color: var(--ink); }
+.contact-email {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  h1 { font-size: 28px; }
+  .hero h1 { font-size: 34px; }
+  main { padding: 32px 18px 64px; }
+  section.legal-section { padding: 20px; }
+}
